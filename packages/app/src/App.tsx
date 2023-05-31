@@ -91,6 +91,13 @@ const routes = (
     </Route>
     <Route path="/settings" element={<UserSettingsPage />} />
     <Route path="/catalog-graph" element={<CatalogGraphPage />} />
+    <Route path="/docs" element={<TechDocsIndexPage />}>
+      <TechDocsIndexPage />
+    </Route>
+    <Route
+      path="/docs/:namespace/:kind/:name/*"
+      element={<TechDocsReaderPage />}
+    />
   </FlatRoutes>
 );
 
